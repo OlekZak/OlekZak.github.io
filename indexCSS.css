@@ -13,7 +13,7 @@ body {
 }
 
 ::-webkit-scrollbar {
-    width: 10px;
+    width: 20px;
 }
 ::-webkit-scrollbar-track {
     background: rgba(172, 128, 181, 0.046);
@@ -76,53 +76,6 @@ body {
     background-color: rgba(172, 128, 181, 0.187);
 }
 
-/*settings list*/
-#siteSettings {
-    overflow-x: hidden;
-    overflow-y: auto;
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    height: 25%;
-}
-
-#titleSettings {
-    position: relative;
-    left: 0;
-    top: -21px;
-    width: 100%;
-    height: 15%;
-    font-size: 22px;
-    font-weight: 600;
-    background-color: rgba(195, 195, 195, 0.048);
-}
-
-.settingsToSelect {
-    position: relative;
-    left: 0;
-    top: -43px;
-    width: 100%;
-    height: 15%;
-    font-size: 20px;
-    font-weight: 400;
-    background-color: rgba(195, 195, 195, 0);
-}
-
-.settingsToSelect:hover {
-    background-color: rgba(172, 128, 181, 0.187);
-}
-
-/*splitter between settings and projects*/
-#splitter {
-    position: absolute;
-    left: 0;
-    bottom: 24.75%;
-    width: 100%;
-    height: 0.3%;
-    background-color: rgba(172, 128, 181, 0.4);
-}
-
 /*right side of the site*/
 #mainRight {
     position: absolute;
@@ -161,6 +114,7 @@ body {
     transform: translate(50%, -50%);
     width: 90%;
     height: 75%;
+    overflow-y: auto;
 }
 
 .content {
@@ -170,4 +124,40 @@ body {
     text-align: center;
     font-size: 28px;
     font-family: monoFont;
+}
+
+.projectPeice {
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    height: fit-content;
+    width: 85%;
+    padding: 30px;
+    background-color: rgb(215, 196, 171);
+    box-shadow: 0px 0px 15px 10px rgba(172, 128, 181, 0.187), 0px 0px 10px 5px rgba(173, 165, 155, 0.703) inset;
+    margin-top: 2%;
+    margin-bottom: 3%;
+    border-radius: 30px;
+}
+
+.screenshot {
+    position: relative;
+    top: 0%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    height: 160px;
+    width: 300px;
+
+}
+
+.projectContent {
+    position: relative;
+    top: 0%;
+    left: 50%;
+    text-align: left;
+    transform: translate(-50%, 0%);
+    width: 60%;
+    text-align: center;
+    font-family: monoFont;
+    font-size: 20px
 }
