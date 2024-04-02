@@ -1,0 +1,173 @@
+/*id = #    class = .*/
+
+/*asset declaration*/
+@font-face {
+    font-family: monoFont;
+    src: url(./SiteFont/UbuntuMono-Regular.ttf);
+}
+
+/*site body and extra settings*/
+body {
+    background-color: rgb(159, 159, 159);
+    overflow: hidden;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-track {
+    background: rgba(172, 128, 181, 0.046);
+}
+::-webkit-scrollbar-thumb {
+    background: rgba(172, 128, 181, 0.16);
+}
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(172, 128, 181, 0.1);
+}
+
+/*left side of the site*/
+#mainLeft {
+    overflow: hidden;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 17%;
+    height: 100%;
+    background-color: rgb(16, 9, 29);
+    color: rgb(140, 68, 188);
+    font-family: monoFont;
+}
+
+/*projects list*/
+#projectList {
+    overflow-x: hidden;
+    overflow-y: hidden;
+    padding: 0;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 75%;
+}
+
+#titleList {
+    position: relative;
+    left: 0;
+    top: -21px;
+    width: 100%;
+    height: 5%;
+    font-size: 22px;
+    font-weight: 600;
+    background-color: rgba(195, 195, 195, 0.048);
+}
+
+.projects {
+    position: relative;
+    left: 0;
+    top: -43px;
+    width: 100%;
+    height: 5%;
+    font-size: 20px;
+    font-weight: 400;
+    background-color: rgba(195, 195, 195, 0);
+}
+
+.projects:hover {
+    background-color: rgba(172, 128, 181, 0.187);
+}
+
+/*settings list*/
+#siteSettings {
+    overflow-x: hidden;
+    overflow-y: auto;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 25%;
+}
+
+#titleSettings {
+    position: relative;
+    left: 0;
+    top: -21px;
+    width: 100%;
+    height: 15%;
+    font-size: 22px;
+    font-weight: 600;
+    background-color: rgba(195, 195, 195, 0.048);
+}
+
+.settingsToSelect {
+    position: relative;
+    left: 0;
+    top: -43px;
+    width: 100%;
+    height: 15%;
+    font-size: 20px;
+    font-weight: 400;
+    background-color: rgba(195, 195, 195, 0);
+}
+
+.settingsToSelect:hover {
+    background-color: rgba(172, 128, 181, 0.187);
+}
+
+/*splitter between settings and projects*/
+#splitter {
+    position: absolute;
+    left: 0;
+    bottom: 24.75%;
+    width: 100%;
+    height: 0.3%;
+    background-color: rgba(172, 128, 181, 0.4);
+}
+
+/*right side of the site*/
+#mainRight {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 83%;
+    height: 100%;
+    background-color: rgb(51, 6, 81);
+}
+
+#homePage {
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    width: 95%;
+    height: 90%;
+    transform: translate(50%, -50%);
+    background-color: antiquewhite;
+    border-radius: 20px;
+    box-shadow: 0px 0px 30px 2px rgba(43, 43, 43, 0.727) inset;
+}
+
+#pageTitle {
+    position: relative;
+    top: -4%;
+    text-align: center;
+    font-size: 50px;
+    font-weight: 600;
+    font-family: monoFont;
+}
+
+#homePageContent {
+    position: absolute;
+    top: 60%;
+    right: 50%;
+    transform: translate(50%, -50%);
+    width: 90%;
+    height: 75%;
+}
+
+.content {
+    position: relative;
+    padding-top: 60px;
+    padding-bottom: 80px;
+    text-align: center;
+    font-size: 28px;
+    font-family: monoFont;
+}
