@@ -37,6 +37,7 @@ body {
     color: rgb(140, 68, 188);
     font-family: monoFont;
     user-select: none;
+    transition: left 175ms ease-in-out;
 }
 
 /*projects list*/
@@ -89,6 +90,7 @@ body {
     height: 100%;
     background-color: rgb(51, 6, 81);
     user-select: none;
+    transition: width 175ms ease-in-out;
 }
 
 #homePage {
@@ -172,5 +174,19 @@ body {
     font-size: 20px;
     word-spacing: 7px;
     font-weight: 600;
+    user-select: none;
+}
+
+#handle {
+    position: absolute;
+    top: 50%;
+    left: 0.5%;
+    transform: translate(0%, -50%);
+    height: fit-content;
+    width: fit-content;
+    background-color: rgb(51, 6, 81);
+    font-size: 40px;
+    font-family: monofont;
+    color: rgb(215, 196, 171);
     user-select: none;
 }
