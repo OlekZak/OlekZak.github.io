@@ -63,6 +63,8 @@ body {
     font-weight: 600;
     background-color: rgba(195, 195, 195, 0.048);
     user-select: none;
+    padding-top: 2%;
+    padding-left: 2%;
 }
 
 .projects {
@@ -75,6 +77,8 @@ body {
     font-weight: 400;
     background-color: rgba(195, 195, 195, 0);
     user-select: none;
+    padding-top: 4%;
+    padding-left: 4%;
 }
 
 .projects:hover {
