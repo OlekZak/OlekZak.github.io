@@ -212,6 +212,19 @@ body {
     font-size: 16px;
 }
 
+#filterButton {
+    display: none;
+}
+#filter {
+    position: absolute;
+    left: 50%;
+    transform: translate(150%, 0%);
+    height: 80%;
+    width: 18%;
+    background-color: rgba(0, 0, 0, 0.361);
+    overflow: hidden;
+}
+
 /*project indepth view*/
 #projectLink {
     position: relative;
