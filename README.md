@@ -1,7 +1,7 @@
 This is my personal portfolio for my work that I do for my 3 main interests:
--Games
--Software
--Hardware
+Games
+Software
+Hardware
 
 
 
