@@ -1,7 +1,10 @@
-This is my personal portfolio of my work that I do for my 3 main interests: \n
-Games \n
-Software \n
-Hardware \n
+This is my personal portfolio of my work that I do for my 3 main interests: 
+
+Games
+
+Software
+
+Hardware 
 
 
 
