@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Silly Cat Clicker</title>
+    </head>
+
+    
+    <!--here are the site building blocks-->
+    <body>
+        <div id="main">
+            <!--everything to do with the playable area-->
+            <div id="playArea">
+                <div id="clickableArea">
+                    <img id="clickableAreaBackground" src="Images/catBackground.png">
+                    <img tabindex="0" id="clickableTarget" src="Images/catClickable.png">
+                    <div id="counterText">Sillies pet:</div>
+                    <div id="counterScore">0</div>
+                </div>
+                <div id="upgradesArea">
+                    <div id="upgradesForPurchase">
+                        <div id="upgradeBox"><p id="upgradeText">Better Cat Food</p><p id="upgradeDescription">This increases the amount of cats per click</p><button id="buy100">Buy 100</button><button id="buy10">Buy 10</button><button id="buy1">Buy 1</button></div>
+                        <div id="upgradeBox"><p id="upgradeText">Better Cat Food</p><p id="upgradeDescription">This increases the amount of cats per click</p><button id="buy100">Buy 100</button><button id="buy10">Buy 10</button><button id="buy1">Buy 1</button></div>
+                        <div id="upgradeBox"><p id="upgradeText">Better Cat Food</p><p id="upgradeDescription">This increases the amount of cats per click</p><button id="buy100">Buy 100</button><button id="buy10">Buy 10</button><button id="buy1">Buy 1</button></div>
+                        <div id="upgradeBox"><p id="upgradeText">Better Cat Food</p><p id="upgradeDescription">This increases the amount of cats per click</p><button id="buy100">Buy 100</button><button id="buy10">Buy 10</button><button id="buy1">Buy 1</button></div>
+                        <div id="upgradeBox"><p id="upgradeText">Better Cat Food</p><p id="upgradeDescription">This increases the amount of cats per click</p><button id="buy100">Buy 100</button><button id="buy10">Buy 10</button><button id="buy1">Buy 1</button></div>
+                        <div id="upgradeBox"><p id="upgradeText">Better Cat Food</p><p id="upgradeDescription">This increases the amount of cats per click</p><button id="buy100">Buy 100</button><button id="buy10">Buy 10</button><button id="buy1">Buy 1</button></div>
+                        <div id="upgradeBox"><p id="upgradeText">Better Cat Food</p><p id="upgradeDescription">This increases the amount of cats per click</p><button id="buy100">Buy 100</button><button id="buy10">Buy 10</button><button id="buy1">Buy 1</button></div>
+                        <div id="upgradeBox"><p id="upgradeText">Better Cat Food</p><p id="upgradeDescription">This increases the amount of cats per click</p><button id="buy100">Buy 100</button><button id="buy10">Buy 10</button><button id="buy1">Buy 1</button></div>
+                        <div id="upgradeBox"><p id="upgradeText">Better Cat Food</p><p id="upgradeDescription">This increases the amount of cats per click</p><button id="buy100">Buy 100</button><button id="buy10">Buy 10</button><button id="buy1">Buy 1</button></div>
+                        <div id="upgradeBox"><p id="upgradeText">Better Cat Food</p><p id="upgradeDescription">This increases the amount of cats per click</p><button id="buy100">Buy 100</button><button id="buy10">Buy 10</button><button id="buy1">Buy 1</button></div>
+                        <div id="upgradeBox"><p id="upgradeText">Better Cat Food</p><p id="upgradeDescription">This increases the amount of cats per click</p><button id="buy100">Buy 100</button><button id="buy10">Buy 10</button><button id="buy1">Buy 1</button></div>
+
+                    </div>
+                </div>
+            </div>
+            
+            <!--everything to do with the header-->
+            <div id="gameHeader">
+                <p id="gameTitle">Silly Cat Clicker</p>
+            </div>
+            
+            <!--everything to do with the footer-->
+            <div id="gameFooter"></div>
+
+            <div id="areaDivider"></div>
+            <div id="areaDividerContrast1"></div>
+            <div id="areaDividerContrast2"></div>
+        </div>
+    </body>
+
+
+    <!--here is the site customisation-->
+    <style>
+
+        /*site config*/
+        body{
+            overflow: hidden;
+        }
+        button{
+            font-family: customFont;
+            height: 43%;
+            width: 10%;
+            border-radius: 20px;
+            background-color: rgb(0,43,172);
+            border-color: rgb(22, 70, 214);
+            color: whitesmoke;
+        }
+        /*custom font declaration*/
+        @font-face {
+            font-family: customFont;
+            src: url(Fonts/GloriaHallelujah-Regular.ttf);
+        }
+
+        /*the main body if the site that devided the site*/
+        #main{
+            position: absolute;
+            top: 0%;
+            right: 0%;
+            height: 100%;
+            width: 100%;
+            /*color for visual ref*/
+            background-color: rgb(100, 100, 100);
+        }
+
+
+
+
+        /*the actual playing area*/
+        #playArea{
+            position: absolute;
+            top: 12%;
+            right: 0%;
+            height: 78%;
+            width: 100%;
+            /*color for visual ref*/
+            background-color: rgb(153,37,119);
+        }
+
+
+        /*clicking area*/
+        #clickableArea{
+            position: absolute;
+            top: 0%;
+            right: 50%;
+            height: 100%;
+            width: 50%;
+            /*color for visual ref*/
+            background-color: rgb(169, 90, 255);
+        }
+        #clickableAreaBackground{
+            position: relative;
+            top: 0%;
+            right: 0%;
+            height: 100%;
+            width: 100%;
+        }
+        /*on click animation*/
+        @keyframes beat {
+            0% {
+                -webkit-transform: scale(1,1);
+                transform: scale(1,1);
+            }
+            5% {
+                -webkit-transform: scale(1.1,1.1);
+                transform: scale(1.1,1.1);
+            }
+            100% {
+                -webkit-transform: scale(1,1);
+                transform: scale(1,1);
+            }
+        }
+        #clickableTarget{
+            position: absolute;
+            top: 20%;
+            right: 20%;
+            -webkit-transform: scale(1,1);
+            transform: scale(1,1);
+            height: 65%;
+            width: 65%;
+        }
+        #clickableTarget:focus{
+            -webkit-animation: beat 0.1s ease-in-out backwards;
+            animation: beat 0.1s ease-in-out backwards;
+        }
+        #clickableTarget:active{
+            -webkit-animation: none;
+            animation: none;
+        }
+        /*COUNTER*/
+        #counterText{
+            position: absolute;
+            top: 8%;
+            right: 50%;
+            transform: translate(-50%, 0%);
+            font-family: customFont;
+            font-size: 150%;
+            color: whitesmoke;
+        }
+        #counterScore{
+            position: absolute;
+            top: 8%;
+            right: 50%;
+            transform: translate(50%, 0%);
+            text-align: center;
+            font-family: customFont;
+            font-size: 150%;
+            color: whitesmoke;
+        }
+
+
+        /*upgrades area*/
+        #upgradesArea{
+            position: absolute;
+            top: 0%;
+            right: 0%;
+            height: 100%;
+            width: 50%;
+            /*color for visual ref*/
+            background-color: rgb(0,43,172);
+        }
+        #upgradesForPurchase{
+            position: absolute;
+            top: 50%;
+            right: -41%;
+            transform: translate(-50%, -50%);
+            height: 90%;
+            width: 90%;
+            /*color for visual ref*/
+            background-color: rgb(22, 70, 214);
+            overflow: auto;
+        }
+
+        /*upgrades template*/
+        #upgradeBox{
+            position: relative;
+            top: 2%;
+            right: -50%;
+            transform: translate(-50%, 0%);
+            height: 10%;
+            width: 90%;
+            /*color for ref*/
+            background-color: rgb(194, 199, 212);
+            font-family: customFont;
+            border-radius: 20px;
+        }
+        #upgradeText{
+            position: relative;
+            top: 1%;
+            right: -1%;
+            color: rgb(117, 0, 0);
+        }
+        #upgradeDescription{
+            position: relative;
+            top: -26%;
+            right: -1%;
+            color: rgb(66, 66, 66);
+        }
+        #buy100{
+            position: absolute;
+            top: 50%;
+            right: 26%;
+            transform: translate(0%, -50%);
+        }
+        #buy10{
+            position: absolute;
+            top: 50%;
+            right: 14%;
+            transform: translate(0%, -50%);
+        }
+        #buy1{
+            position: absolute;
+            top: 50%;
+            right: 2%;
+            transform: translate(0%, -50%);
+        }
+
+
+
+
+        /*divide between clickable & upgrades*/
+        #areaDivider{
+            position: absolute;
+            top: 12%;
+            right: 50%;
+            transform: translate(50%, 0%);
+            height: 78%;
+            width: 1%;
+            /*color for visual ref*/
+            background-color: rgb(100, 140, 170);
+            box-shadow: 0px 0px 20px 20px rgba(67, 93, 112, 0.356);
+        }
+        #areaDividerContrast1{
+            position: absolute;
+            top: 8%;
+            right: 50%;
+            transform: translate(50%, 0%);
+            height: 4%;
+            width: 6%;
+            /*color fo visual ref*/
+            background-color: rgb(100, 140, 170);
+        }
+        #areaDividerContrast2{
+            position: absolute;
+            top: 90%;
+            right: 50%;
+            transform: translate(50%, 0%);
+            height: 4%;
+            width: 6%;
+            /*color fo visual ref*/
+            background-color: rgb(100, 140, 170);
+        }
+
+        /*the header*/
+        #gameHeader{
+            position: absolute;
+            top: 0%;
+            right: 0%;
+            height: 12%;
+            width: 100%;
+            /*color for visual ref*/
+            background-color: rgb(100, 140, 170);
+            box-shadow: 0px 0px 20px 20px rgba(67, 93, 112, 0.356);
+        }
+        #gameTitle{
+            position: relative;
+            top: 20%;
+            right: 50%;
+            transform: translate(50%, -50%);
+            text-align: center;
+            font-family: customFont;
+            color: whitesmoke;
+            font-size: 200%;
+        }
+
+        /*the footer*/
+        #gameFooter{
+            position: absolute;
+            top: 100%;
+            right: 0%;
+            transform: translate(0%, -100%);
+            width: 100%;
+            height: 10%;
+            /*color for visual ref*/
+            background-color: rgb(100, 140, 170);
+            box-shadow: 0px 0px 20px 20px rgba(67, 93, 112, 0.356);
+        }
+    </style>
+
+
+    <!--here is the site script-->
+    <script>
+        let counter = 0;
+
+        document.getElementById('clickableTarget').onclick = () => {
+            counter = counter + 1;
+            document.getElementById('counterScore').innerText = counter;
+        };
+    </script>
+</html>
