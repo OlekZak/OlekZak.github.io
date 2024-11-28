@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Portfolio</title>
+        <link rel="icon" type="Images/png" href="./assets/FaviconActive.png">
+        <link rel="stylesheet" type="text/css" href="./stylesheet.css">
+    </head>
+
+    <body>
+        <!--load icon library for mobile-->
+        <link rel="stylesheet" href="https://cdnjs.cloudfare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+        <!--page top spacer-->
+        <div class="spacer"></div>
+        
+        <!--main site text-->
+        <div class="mainBox" id="intro">
+            <p class="headingText">Academics</p>
+            <p class="mainText">Here is my collection of academic works that I've produced on my journey through education.</p>
+            <div class="gridLayout">
+                <div href="" class="gridElement">
+                    <img class="thumbnail" src="">
+                    <p class="gridTitle"></p>
+                    <p class="gridNote"></p>
+                </div>
+                <div onclick="document.location='https://olek7111137.wixsite.com/portfolio-year-2'" class="gridElement">
+                    <img class="thumbnail" src="./assets/year2.png">
+                    <p class="gridTitle">NTU Confetti Year 2 Portfolio</p>
+                    <p class="gridNote">Wixsite Portfolio</p>
+                </div>
+                <div onclick="document.location='https://olek7111137.wixsite.com/portfolioyear1'" class="gridElement">
+                    <img class="thumbnail" src="./assets/year1.png">
+                    <p class="gridTitle">NTU Confetti Year 1 Portfolio</p>
+                    <p class="gridNote">Wixsite Portfolio</p>
+                </div>
+            </div>
+        </div>
+
+        <!--page bottom spacer-->
+        <div class="spacer"></div>
+
+        <!--top nav bar-->
+        <div class="topnav" id="myTopnav">
+            <a href="./index.html" class="active">Home</a>
+            <a href="./games.html">Games</a>
+            <a href="./software.html">Software</a>
+            <a href="./hardware.html">Hardware</a>
+            <a href="./academics.html">Academics</a>
+            <a href="javascript:void(0);" class="icon" onclick="mobileNav()">
+                <img id="menu" src="./assets/LogoSimple.png" alt="LogoSimple">
+                <i class="fa fa-bars"></i>
+            </a>
+        </div>
+        
+        <!--bottom nav bar-->
+        <div class="bottomnav" id="myBottomnav">
+            <a href="https://github.com/OlekZak/OlekZak.github.io">
+                <img id="git" src="./assets/githubLogo.png" alt="Source Code">
+            </a>
+        </div>
+
+        <script src="./script.js"></script>
+    </body>
+
+</html>
