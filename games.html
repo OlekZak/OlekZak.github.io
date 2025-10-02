@@ -1,71 +1,71 @@
 <!DOCTYPE html>
-
-<html>
-    <head>
-        <title>Portfolio</title>
-        <link rel="icon" type="Images/png" href="./assets/FaviconActive.png">
-        <link rel="stylesheet" type="text/css" href="./stylesheet.css">
-    </head>
-
-    <body>
-        <!--load icon library for mobile-->
-        <link rel="stylesheet" href="https://cdnjs.cloudfare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-        <!--page top spacer-->
-        <div class="spacer"></div>
-        
-        <!--main site text-->
-        <div class="mainBox" id="intro">
-            <p class="headingText">Games</p>
-            <p class="mainText">Here is my collection of games I've worked on, from webgames to more demanding titles.</p>
-            <div class="gridLayout">
-                <div onclick="document.location='./games/RocketKitty.html'" class="gridElement">
-                    <img class="thumbnail" src="./games/assets/RocketKitty.png">
-                    <p class="gridTitle">Rocket Kitty</p>
-                    <p class="gridNote">Web Flappy Bird Clone</p>
-                </div>
-                <div onclick="document.location='./games/Miku.html'" class="gridElement">
-                    <img class="thumbnail" src="./games/assets/MikuClicker.png">
-                    <p class="gridTitle">Miku Clicker</p>
-                    <p class="gridNote">Hatsune Miku inspired Web Clicker</p>
-                </div>
-                <div onclick="document.location='./games/NGEClicker.html'" class="gridElement">
-                    <img class="thumbnail" src="./games/assets/NGEClicker.png">
-                    <p class="gridTitle">NGE Clicker</p>
-                    <p class="gridNote">Neon Genesis Evangelion inspired Web Clicker</p>
-                </div>
-                <div onclick="document.location='./games/CatClicker.html'" class="gridElement">
-                    <img class="thumbnail" src="./games/assets/SillyCatClicker.png">
-                    <p class="gridTitle">Silly Cat Clicker</p>
-                    <p class="gridNote">Cat Web Clicker</p>
-                </div>
-            </div>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Olek's Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <link id="favicon" rel="icon" type="image/png" href="assets/favicon-active.png">
+  <script defer src="script.js"></script>
+</head>
+<body>
+    <!-- Particle Background -->
+    <canvas id="particles"></canvas>
+    
+    <!-- Navbar -->
+    <header class="navbar">
+        <div class="logo">
+            <img src="assets/logo.png" alt="Logo">
         </div>
+        <nav class="nav-links">
+            <ul>
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./games.html">Games</a></li>
+                <li><a href="./software.html">Software</a></li>
+                <li><a href="./hardware.html">Hardware</a></li>
+                <li><a href="./academics.html">Academics</a></li>
+            </ul>
+        </nav>
+        <div class="menu-toggle">&#9776;</div>
+    </header>
+    
+    <!-- Main Content Template -->
+    <main class="content">
+        <section>
+            <h1>Welcome To The Games Side</h1>
 
-        <!--page bottom spacer-->
-        <div class="spacer"></div>
+            <article class="project-card">
+                <img src="./games/RocketKitty.png" alt="Rocket Kitty" class="project-image">
+                <div class="project-content">
+                    <h2 class="project-title">Rocket Kitty</h2>
+                    <p class="project-description">For this project, I decided to recreate Flappy Bird in JavaScript with a furry twist. (Not Mobile Optimised)</p>
+                    <a href="./games/RocketKitty/index.html" class="project-link">Play Game →</a>
+                </div>
+            </article>
 
-        <!--top nav bar-->
-        <div class="topnav" id="myTopnav">
-            <a href="./index.html" class="active">Home</a>
-            <a href="./games.html">Games</a>
-            <a href="./software.html">Software</a>
-            <a href="./hardware.html">Hardware</a>
-            <a href="./academics.html">Academics</a>
-            <a href="javascript:void(0);" class="icon" onclick="mobileNav()">
-                <img id="menu" src="./assets/LogoSimple.png" alt="LogoSimple">
-                <i class="fa fa-bars"></i>
-            </a>
-        </div>
-        
-        <!--bottom nav bar-->
-        <div class="bottomnav" id="myBottomnav">
-            <a href="https://github.com/OlekZak/OlekZak.github.io">
-                <img id="git" src="./assets/githubLogo.png" alt="Source Code">
-            </a>
-        </div>
+            <article class="project-card">
+                <img src="./games/MikuClicker.png" alt="Miku Clicker" class="project-image">
+                <div class="project-content">
+                    <h2 class="project-title">Hatsune Miku Clicker</h2>
+                    <p class="project-description">At this stage in learning web development through games, I decided to work on another clicker game but with a greater focus on styling and animation. (Not Mobile Optimised)</p>
+                    <a href="./games/MikuClickerGame/MikuClicker.html" class="project-link">Play Game →</a>
+                </div>
+            </article>
 
-        <script src="./script.js"></script>
-    </body>
-
+            <article class="project-card">
+                <img src="./games/NGEClicker.png" alt="NGE Clicker" class="project-image">
+                <div class="project-content">
+                    <h2 class="project-title">Neon Genesis Evangelion Clicker</h2>
+                    <p class="project-description">To get myself into learning HTML, CSS, and JavaScript, I decided to make basic web games untill I felt ready to make my portfolio, this being the first game I've made with basic HTML, CSS and JS. (Not Mobile Optimised)</p>
+                    <a href="./games/NGEClickerGame/NGEClicker.html" class="project-link">Play Game →</a>
+                </div>
+            </article>
+        </section>
+    </main>
+    
+    <!-- GitHub Button -->
+    <a href="https://github.com/OlekZak" target="_blank" class="github-btn">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub"/>
+    </a>
+</body>
 </html>

@@ -1,56 +1,45 @@
 <!DOCTYPE html>
-
-<html>
-    <head>
-        <title>Portfolio</title>
-        <link rel="icon" type="Images/png" href="./assets/FaviconActive.png">
-        <link rel="stylesheet" type="text/css" href="./stylesheet.css">
-    </head>
-
-    <body>
-        <!--load icon library for mobile-->
-        <link rel="stylesheet" href="https://cdnjs.cloudfare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-        <!--page top spacer-->
-        <div class="spacer"></div>
-        
-        <!--main site text-->
-        <div class="mainBox" id="intro">
-            <p class="headingText">Hardware</p>
-            <p class="mainText">Here is my collection of hardware projects I've worked on, ranging from learning new techniques to experimenting with a broad selection of hardware. In some cases I have documented my experiance reparing some of the hardware I've come across</p>
-            <div class="gridLayout">
-                <div href="" class="gridElement">
-                    <img class="thumbnail" src="">
-                    <p class="gridTitle"></p>
-                    <p class="gridNote"></p>
-                </div>
-            </div>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Olek's Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <link id="favicon" rel="icon" type="image/png" href="assets/favicon-active.png">
+  <script defer src="script.js"></script>
+</head>
+<body>
+    <!-- Particle Background -->
+    <canvas id="particles"></canvas>
+    
+    <!-- Navbar -->
+    <header class="navbar">
+        <div class="logo">
+            <img src="assets/logo.png" alt="Logo">
         </div>
-
-        <!--page bottom spacer-->
-        <div class="spacer"></div>
-
-        <!--top nav bar-->
-        <div class="topnav" id="myTopnav">
-            <a href="./index.html" class="active">Home</a>
-            <a href="./games.html">Games</a>
-            <a href="./software.html">Software</a>
-            <a href="./hardware.html">Hardware</a>
-            <a href="./academics.html">Academics</a>
-            <a href="javascript:void(0);" class="icon" onclick="mobileNav()">
-                <img id="menu" src="./assets/LogoSimple.png" alt="LogoSimple">
-                <i class="fa fa-bars"></i>
-            </a>
-        </div>
-        
-        <!--bottom nav bar-->
-        <div class="bottomnav" id="myBottomnav">
-            <a href="https://github.com/OlekZak/OlekZak.github.io">
-                <img id="git" src="./assets/githubLogo.png" alt="Source Code">
-            </a>
-        </div>
-
-        <script src="./script.js"></script>
-    </body>
-
+        <nav class="nav-links">
+            <ul>
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./games.html">Games</a></li>
+                <li><a href="./software.html">Software</a></li>
+                <li><a href="./hardware.html">Hardware</a></li>
+                <li><a href="./academics.html">Academics</a></li>
+            </ul>
+        </nav>
+        <div class="menu-toggle">&#9776;</div>
+    </header>
+    
+    <!-- Main Content Template -->
+    <main class="content">
+        <section>
+            <h1>Under Construction</h1>
+            <p>Nothing to see here for now. Maybe come back later?</p>
+        </section>
+    </main>
+    
+    <!-- GitHub Button -->
+    <a href="https://github.com/OlekZak" target="_blank" class="github-btn">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub"/>
+    </a>
+</body>
 </html>

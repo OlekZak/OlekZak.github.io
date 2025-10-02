@@ -1,90 +1,48 @@
 <!DOCTYPE html>
-
-<html>
-    <head>
-        <title>Portfolio</title>
-        <link rel="icon" type="Images/png" href="./assets/FaviconActive.png">
-        <link rel="stylesheet" type="text/css" href="./stylesheet.css">
-    </head>
-
-    <body>
-        <!--load icon library for mobile-->
-        <link rel="stylesheet" href="https://cdnjs.cloudfare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-        <!--page top spacer-->
-        <div class="spacer"></div>
-        
-        <!--main site text-->
-        <div class="mainBox" id="intro">
-            <p class="headingText">Welcome</p>
-            <p class="mainText">My name is Olek and I'm a Developer, System Achitect and Intergrator.</p>
-            <p class="mainText">I'm an NTU Confetti FE Graduate, and current NTU Clifton student on my journey in developing my intrest in both software and hardware.</p>
-            <p class="mainText">My specialities lay in Web Development and Game Development, as well as the Construction, Configuration and Intergration of Hardware.</p>
-            <p class="mainText">This Portfolio is a collection of works I've produced. Some works are directly available from this site, while others lead to external links.</p>
-            <video class="videoPlayer" loop autoplay muted>
-                <source src="./assets/showreel.mp4" type="video/mp4">
-            </video>
-            <p class="mainText">Over the years, I have learnt a plethora of software and languages to add to my programing skill set, these being:</p>
-            <div class="subBox">
-                <p class="subText"><span class="bulletPoint">● </span>Unreal Engine 5</p>
-                <p class="subText"><span class="bulletPoint">● </span> Unreal Engine 4</p>
-                <p class="subText"><span class="bulletPoint">● </span> Roblox Studio</p>
-                <p class="subText"><span class="bulletPoint">● </span> Godot</p>
-                <p class="subText"><span class="bulletPoint">● </span> Visual Studio Code</p>
-                <p class="subText"><span class="bulletPoint">● </span> Nano</p>
-                <p class="subText"><span class="bulletPoint">● </span> Unreal Blueprint</p>
-                <p class="subText"><span class="bulletPoint">● </span> Lua Visual Script</p>
-                <p class="subText"><span class="bulletPoint">● </span> HTML5</p>
-                <p class="subText"><span class="bulletPoint">● </span> CSS3</p>
-                <p class="subText"><span class="bulletPoint">● </span> JavaScript</p>
-                <p class="subText"><span class="bulletPoint">● </span> Python</p>
-            </div>
-            <p class="mainText">Alongside this, I have developed a key eye to detail and a passion to provide the highest quality hardware to, on occasion, go along side my software projcts. This lead me to build a strong understanding of:</p>
-            <div class="subBox">
-                <p class="subText"><span class="bulletPoint">● </span> Building and Configuration of Gaming computers</p>
-                <p class="subText"><span class="bulletPoint">● </span> Building and Configuration of Workstation computers</p>
-                <p class="subText"><span class="bulletPoint">● </span> Building and Configuration of Server computers</p>
-                <p class="subText"><span class="bulletPoint">● </span> Building and Configuration of Arcade devices</p>
-                <p class="subText"><span class="bulletPoint">● </span> Repair of Consumer Electronics</p>
-                <p class="subText"><span class="bulletPoint">● </span> Repair of Mission Critical Electronics</p>
-                <p class="subText"><span class="bulletPoint">● </span> Configuration of small scale Servers for Private use</p>
-            </div>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Olek's Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <link id="favicon" rel="icon" type="image/png" href="assets/favicon-active.png">
+  <script defer src="script.js"></script>
+</head>
+<body>
+    <!-- Particle Background -->
+    <canvas id="particles"></canvas>
+    
+    <!-- Navbar -->
+    <header class="navbar">
+        <div class="logo">
+            <img src="assets/logo.png" alt="Logo">
         </div>
-        <div class="mainBox">
-            <p class="headingText">Contact and Socials</p>
-            <p class="mainText">If you would like to contact me for any reason or view lates updates on social media, you may do so via these platforms:</p>
-            <div class="subBox">
-                <p class="subText"><span class="bulletPoint">● </span> GitHub</p>
-                <p class="subText"><span class="bulletPoint">● </span> Steam</p>
-                <p class="subText"><span class="bulletPoint">● </span> YouTube</p>
-                <p class="subText"><span class="bulletPoint">● </span> Discord</p>
-            </div>
-        </div>
-
-        <!--page bottom spacer-->
-        <div class="spacer"></div>
-
-        <!--top nav bar-->
-        <div class="topnav" id="myTopnav">
-            <a href="./index.html" class="active">Home</a>
-            <a href="./games.html">Games</a>
-            <a href="./software.html">Software</a>
-            <a href="./hardware.html">Hardware</a>
-            <a href="./academics.html">Academics</a>
-            <a href="javascript:void(0);" class="icon" onclick="mobileNav()">
-                <img id="menu" src="./assets/LogoSimple.png" alt="LogoSimple">
-                <i class="fa fa-bars"></i>
-            </a>
-        </div>
-        
-        <!--bottom nav bar-->
-        <div class="bottomnav" id="myBottomnav">
-            <a href="https://github.com/OlekZak/OlekZak.github.io">
-                <img id="git" src="./assets/githubLogo.png" alt="Source Code">
-            </a>
-        </div>
-
-        <script src="./script.js"></script>
-    </body>
-
+        <nav class="nav-links">
+            <ul>
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./games.html">Games</a></li>
+                <li><a href="./software.html">Software</a></li>
+                <li><a href="./hardware.html">Hardware</a></li>
+                <li><a href="./academics.html">Academics</a></li>
+            </ul>
+        </nav>
+        <div class="menu-toggle">&#9776;</div>
+    </header>
+    
+    <!-- Main Content Template -->
+    <main class="content">
+        <section>
+            <h1>Hi, I'm Olek Żak</h1>
+            <p>Im a developer from Poland with a passion for creativity, problem solving, and learning. I make games, write helpful software, tinker with hardware, and dive head first into learning new thing and feeding my curiosity.</p>
+            <p>Whether it's developing games that I would want to play, writing software that make my workflow smoother and easier, experimenting with a wide range of diffrent electronics, or exploring new topics, I always thrive with the right balance of creativity and technology. My projects reflect a love for problem-solving, learning, and pushing myself outside of my comfort zone.</p>
+            <p>Take a look around to see my work, explore my experiments, or just say hi! I'm always excited to connect with fellow developers, creators and tinkerers. If you would like to connect with me, by socials are bellow:</p>
+            <img src="assets/logo.png" alt="logo" class="responsive-img">
+        </section>
+    </main>
+    
+    <!-- GitHub Button -->
+    <a href="https://github.com/OlekZak" target="_blank" class="github-btn">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub"/>
+    </a>
+</body>
 </html>

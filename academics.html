@@ -1,71 +1,72 @@
 <!DOCTYPE html>
-
-<html>
-    <head>
-        <title>Portfolio</title>
-        <link rel="icon" type="Images/png" href="./assets/FaviconActive.png">
-        <link rel="stylesheet" type="text/css" href="./stylesheet.css">
-    </head>
-
-    <body>
-        <!--load icon library for mobile-->
-        <link rel="stylesheet" href="https://cdnjs.cloudfare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-        <!--page top spacer-->
-        <div class="spacer"></div>
-        
-        <!--main site text-->
-        <div class="mainBox" id="intro">
-            <p class="headingText">Academics</p>
-            <p class="mainText">Here is my collection of academic works that I've produced on my journey through education.</p>
-            <div class="gridLayout">
-                <div onclick="" class="gridElement">
-                    <img class="thumbnail" src="">
-                    <p class="gridTitle"></p>
-                    <p class="gridNote"></p>
-                </div>
-                <div onclick="document.location='./academics/unit3.html'" class="gridElement">
-                    <img class="thumbnail" src="./academics/assets/Unit3.png">
-                    <p class="gridTitle">NTU Clifton Unit 3 site</p>
-                    <p class="gridNote">Html5 site</p>
-                </div>
-                <div onclick="document.location='https://olek7111137.wixsite.com/portfolio-year-2'" class="gridElement">
-                    <img class="thumbnail" src="./assets/year2.png">
-                    <p class="gridTitle">NTU Confetti Year 2 Portfolio</p>
-                    <p class="gridNote">Wixsite Portfolio</p>
-                </div>
-                <div onclick="document.location='https://olek7111137.wixsite.com/portfolioyear1'" class="gridElement">
-                    <img class="thumbnail" src="./assets/year1.png">
-                    <p class="gridTitle">NTU Confetti Year 1 Portfolio</p>
-                    <p class="gridNote">Wixsite Portfolio</p>
-                </div>
-            </div>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Olek's Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <link id="favicon" rel="icon" type="image/png" href="assets/favicon-active.png">
+  <script defer src="script.js"></script>
+</head>
+<body>
+    <!-- Particle Background -->
+    <canvas id="particles"></canvas>
+    
+    <!-- Navbar -->
+    <header class="navbar">
+        <div class="logo">
+            <img src="assets/logo.png" alt="Logo">
         </div>
+        <nav class="nav-links">
+            <ul>
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./games.html">Games</a></li>
+                <li><a href="./software.html">Software</a></li>
+                <li><a href="./hardware.html">Hardware</a></li>
+                <li><a href="./academics.html">Academics</a></li>
+            </ul>
+        </nav>
+        <div class="menu-toggle">&#9776;</div>
+    </header>
+    
+    <!-- Main Content Template -->
+    <main class="content">
+        <section>
+            <h1>Welcome To The Academic Side</h1>
+            <p>The projects here show my educational journey from my most recent academic accomplishments to where I started.</p>
 
-        <!--page bottom spacer-->
-        <div class="spacer"></div>
+            <article class="project-card">
+                <img src="./academics/Unit3.png" alt="Revision Site" class="project-image">
+                <div class="project-content">
+                    <h2 class="project-title">Mathematics Revision Site</h2>
+                    <p class="project-description">This project consisted of making a website to help me revise maths for my 1st year at University. (Not Mobile Optimised)</p>
+                    <a href="./academics/revisionSite/hub.html" class="project-link">View Site →</a>
+                </div>
+            </article>
 
-        <!--top nav bar-->
-        <div class="topnav" id="myTopnav">
-            <a href="./index.html" class="active">Home</a>
-            <a href="./games.html">Games</a>
-            <a href="./software.html">Software</a>
-            <a href="./hardware.html">Hardware</a>
-            <a href="./academics.html">Academics</a>
-            <a href="javascript:void(0);" class="icon" onclick="mobileNav()">
-                <img id="menu" src="./assets/LogoSimple.png" alt="LogoSimple">
-                <i class="fa fa-bars"></i>
-            </a>
-        </div>
-        
-        <!--bottom nav bar-->
-        <div class="bottomnav" id="myBottomnav">
-            <a href="https://github.com/OlekZak/OlekZak.github.io">
-                <img id="git" src="./assets/githubLogo.png" alt="Source Code">
-            </a>
-        </div>
+            <article class="project-card">
+                <img src="./academics/year2.png" alt="2nd year Portfolio" class="project-image">
+                <div class="project-content">
+                    <h2 class="project-title">College Second Year Portfolio</h2>
+                    <p class="project-description">This is a collection of work that I produced during my second year at College. (Not Mobile Optimised)</p>
+                    <a href="https://olek7111137.wixsite.com/portfolio-year-2" class="project-link">View Site →</a>
+                </div>
+            </article>
 
-        <script src="./script.js"></script>
-    </body>
-
+            <article class="project-card">
+                <img src="./academics/year1.png" alt="1st year Portfolio" class="project-image">
+                <div class="project-content">
+                    <h2 class="project-title">College First Year Portfolio</h2>
+                    <p class="project-description">This is a collection of work that I produced during my second year at College. (Not Mobile Optimised)</p>
+                    <a href="https://olek7111137.wixsite.com/portfolioyear1" class="project-link">View Site →</a>
+                </div>
+            </article>
+        </section>
+    </main>
+    
+    <!-- GitHub Button -->
+    <a href="https://github.com/OlekZak" target="_blank" class="github-btn">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub"/>
+    </a>
+</body>
 </html>

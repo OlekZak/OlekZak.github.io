@@ -1,0 +1,303 @@
+/* Reset + Fonts */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: Arial, sans-serif;
+  background: #0e0e0e;
+  color: #f5f5f5;
+  line-height: 1.6;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #1a1a1a;
+  padding: 1rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+.logo img {
+  height: 40px;
+  width: auto;
+  display: block;
+}
+.nav-links {
+  transition: max-height 0.4s ease, opacity 0.4s ease;
+}
+.nav-links ul {
+  display: flex;
+  list-style: none;
+  gap: 1.5rem;
+}
+.nav-links a {
+  color: #f5f5f5;
+  text-decoration: none;
+  position: relative;
+  display: inline-block;
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+.nav-links a:hover {
+  color: #00ffcc;
+  transform: translateY(-3px) scale(1.05);
+}
+.nav-links a:active {
+  transform: translateY(1px) scale(0.95);
+}
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -4px;
+  left: 0;
+  background: #00ffcc;
+  transition: width 0.3s ease;
+}
+.nav-links a:hover::after {
+  width: 100%;
+}
+.menu-toggle {
+  display: none;
+  font-size: 2rem;
+  cursor: pointer;
+  color: #f5f5f5;
+}
+
+/* Content */
+.content {
+  padding: 2rem;
+  max-width: 900px;
+  margin: auto;
+}
+.content h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #00ffcc;
+}
+
+/* Paragraph spacing */
+.content p {
+  margin-bottom: 1.5rem; /* space between paragraphs */
+  line-height: 1.8;
+}
+
+/* GitHub Floating Button */
+.github-btn {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  background: #1a1a1a;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 4px 10px rgba(0,0,0,0.5);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.github-btn img {
+  width: 28px;
+  height: 28px;
+  filter: invert(100%);
+  transition: transform 0.4s ease;
+}
+.github-btn:hover {
+  transform: scale(1.15);
+  box-shadow: 0px 0px 15px #00ffcc, 0px 0px 30px rgba(0,255,204,0.4);
+}
+.github-btn:hover img {
+  transform: rotate(360deg);
+}
+
+/* Particle Background */
+#particles {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background: #0e0e0e;
+}
+
+/* Responsive 4:3 Image Class */
+.responsive-img {
+  width: 100%;
+  max-width: 600px;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  display: block;
+  margin: 1rem auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 255, 204, 0.2);
+  transition: transform 0.3s ease;
+}
+.responsive-img:hover {
+  transform: scale(1.03);
+}
+
+/* Projects Section */
+.projects {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  padding: 2rem 0;
+}
+
+/* Individual Project Card */
+.project-card {
+  display: flex;
+  background: #1a1a1a;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 255, 204, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin-bottom: 1rem;
+}
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(0, 255, 204, 0.4);
+}
+
+/* Project content */
+.project-image {
+  width: 40%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+.project-content {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.project-title {
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+  color: #00ffcc;
+}
+.project-description {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+.project-link {
+  align-self: flex-start;
+  text-decoration: none;
+  color: #00ffcc;
+  font-weight: bold;
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+.project-link:hover {
+  color: #00ffaa;
+  transform: translateX(3px);
+}
+
+/* Responsive Design: Mobile Drawer & Images */
+@media (max-width: 768px) {
+  .logo {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+  }
+
+  .navbar {
+    flex-wrap: wrap;
+    justify-content: center;
+    position: relative;
+  }
+
+  .menu-toggle {
+    display: block;
+    position: absolute;
+    right: 20px;
+    top: 15px;
+  }
+
+  .nav-links {
+    width: 100%;
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    background: #111;
+    transition: max-height 0.4s ease, opacity 0.4s ease;
+  }
+
+  .nav-links ul {
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem 0;
+    gap: 1rem;
+  }
+
+  .nav-links ul li {
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: opacity 0.4s ease, transform 0.4s ease;
+  }
+
+  .nav-links.active {
+    max-height: 400px;
+    opacity: 1;
+  }
+
+  .nav-links.active ul li {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .nav-links.active ul li:nth-child(1) { transition-delay: 0.05s; }
+  .nav-links.active ul li:nth-child(2) { transition-delay: 0.15s; }
+  .nav-links.active ul li:nth-child(3) { transition-delay: 0.25s; }
+  .nav-links.active ul li:nth-child(4) { transition-delay: 0.35s; }
+  .nav-links.active ul li:nth-child(5) { transition-delay: 0.45s; }
+
+  /* Mobile image adjustments */
+  .responsive-img {
+    width: 90%;
+    max-width: none;
+    margin: 1rem auto;
+  }
+
+  /* Mobile paragraph adjustments */
+  .content p {
+    margin-bottom: 1.2rem;
+    font-size: 0.95rem;
+  }
+
+  /* Mobile project adjustments */
+  .projects {
+    gap: 2rem; /* slightly smaller spacing on mobile */
+  }
+  .project-card {
+    flex-direction: column;
+    margin-bottom: 1rem;
+  }
+  .project-image {
+    width: 100%;
+  }
+  .project-content {
+    padding: 1rem;
+  }
+  .project-title {
+    font-size: 1.5rem;
+  }
+  .project-description {
+    font-size: 0.95rem;
+  }
+
+  /* Disable hover scale on touch devices */
+  @media (hover: none) {
+    .responsive-img:hover {
+      transform: none;
+    }
+  }
+}
